@@ -1,0 +1,9 @@
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_BaseEntity\bin\Debug\netcoreapp3.1\ForestApp_CityApi_BaseEntity.deps.json
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_BaseEntity\bin\Debug\netcoreapp3.1\ForestApp_CityApi_BaseEntity.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_BaseEntity\bin\Debug\netcoreapp3.1\ForestApp_CityApi_BaseEntity.pdb
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_BaseEntity\obj\Debug\netcoreapp3.1\ForestApp_CityApi_BaseEntity.csprojAssemblyReference.cache
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_BaseEntity\obj\Debug\netcoreapp3.1\ForestApp_CityApi_BaseEntity.AssemblyInfoInputs.cache
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_BaseEntity\obj\Debug\netcoreapp3.1\ForestApp_CityApi_BaseEntity.AssemblyInfo.cs
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_BaseEntity\obj\Debug\netcoreapp3.1\ForestApp_CityApi_BaseEntity.csproj.CoreCompileInputs.cache
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_BaseEntity\obj\Debug\netcoreapp3.1\ForestApp_CityApi_BaseEntity.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_BaseEntity\obj\Debug\netcoreapp3.1\ForestApp_CityApi_BaseEntity.pdb

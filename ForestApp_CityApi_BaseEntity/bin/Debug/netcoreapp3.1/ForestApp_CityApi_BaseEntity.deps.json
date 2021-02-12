@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ForestApp_CityApi_BaseEntity/1.0.0": {
+        "runtime": {
+          "ForestApp_CityApi_BaseEntity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ForestApp_CityApi_BaseEntity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
