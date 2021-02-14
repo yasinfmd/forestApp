@@ -3,19 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_ApiGateWay", "ForestApp_.ApiGateWay\ForestApp_ApiGateWay.csproj", "{68E35BDD-7972-4C56-8820-367580702925}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_ApiGateWay", "ForestApp_.ApiGateWay\ForestApp_ApiGateWay.csproj", "{68E35BDD-7972-4C56-8820-367580702925}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{9E1E7761-8A54-425E-BD2C-08A3C8FD68FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForestApp.CityApi", "ForestApp.CityApi", "{86D402BC-20D6-4BA5-AC97-E09B345BE9BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_CityApi", "ForestApp_CityApi\ForestApp_CityApi.csproj", "{4CFCF014-94AF-4534-B28E-D41B2985018D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_CityApi", "ForestApp_CityApi\ForestApp_CityApi.csproj", "{4CFCF014-94AF-4534-B28E-D41B2985018D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_CityApi_DataAccess", "ForestApp_CityApi_DataAccess\ForestApp_CityApi_DataAccess.csproj", "{5FEBB5AB-EC23-4504-9273-563DBAA16EAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_CityApi_DataAccess", "ForestApp_CityApi_DataAccess\ForestApp_CityApi_DataAccess.csproj", "{5FEBB5AB-EC23-4504-9273-563DBAA16EAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_CityApi_BaseEntity", "ForestApp_CityApi_BaseEntity\ForestApp_CityApi_BaseEntity.csproj", "{52BE3E3A-6E64-4C00-9ED9-3DFB2CD2EC56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_CityApi_BaseEntity", "ForestApp_CityApi_BaseEntity\ForestApp_CityApi_BaseEntity.csproj", "{52BE3E3A-6E64-4C00-9ED9-3DFB2CD2EC56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_CityApi_Entity", "ForestApp_CityApi_Entity\ForestApp_CityApi_Entity.csproj", "{238AC02E-7125-4D76-AA4F-98B13D76F56A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_CityApi_Entity", "ForestApp_CityApi_Entity\ForestApp_CityApi_Entity.csproj", "{238AC02E-7125-4D76-AA4F-98B13D76F56A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestAppBase", "ForestAppBase\ForestAppBase.csproj", "{781E40C5-A41C-4567-BAD7-9ABF3B0FD6A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_CityApi_Business", "ForestApp_CityApi_Business\ForestApp_CityApi_Business.csproj", "{7B1149FF-4E6A-485D-AA9B-9CAF3148E88A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_CityApi_Dto", "ForestApp_CityApi_Dto\ForestApp_CityApi_Dto.csproj", "{F689259B-FCCE-4DAD-B5F5-554C54EF4808}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +49,18 @@ Global
 		{238AC02E-7125-4D76-AA4F-98B13D76F56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{238AC02E-7125-4D76-AA4F-98B13D76F56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{238AC02E-7125-4D76-AA4F-98B13D76F56A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{781E40C5-A41C-4567-BAD7-9ABF3B0FD6A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{781E40C5-A41C-4567-BAD7-9ABF3B0FD6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{781E40C5-A41C-4567-BAD7-9ABF3B0FD6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{781E40C5-A41C-4567-BAD7-9ABF3B0FD6A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B1149FF-4E6A-485D-AA9B-9CAF3148E88A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B1149FF-4E6A-485D-AA9B-9CAF3148E88A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B1149FF-4E6A-485D-AA9B-9CAF3148E88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B1149FF-4E6A-485D-AA9B-9CAF3148E88A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F689259B-FCCE-4DAD-B5F5-554C54EF4808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F689259B-FCCE-4DAD-B5F5-554C54EF4808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F689259B-FCCE-4DAD-B5F5-554C54EF4808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F689259B-FCCE-4DAD-B5F5-554C54EF4808}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +71,8 @@ Global
 		{5FEBB5AB-EC23-4504-9273-563DBAA16EAE} = {86D402BC-20D6-4BA5-AC97-E09B345BE9BD}
 		{52BE3E3A-6E64-4C00-9ED9-3DFB2CD2EC56} = {86D402BC-20D6-4BA5-AC97-E09B345BE9BD}
 		{238AC02E-7125-4D76-AA4F-98B13D76F56A} = {86D402BC-20D6-4BA5-AC97-E09B345BE9BD}
+		{7B1149FF-4E6A-485D-AA9B-9CAF3148E88A} = {86D402BC-20D6-4BA5-AC97-E09B345BE9BD}
+		{F689259B-FCCE-4DAD-B5F5-554C54EF4808} = {86D402BC-20D6-4BA5-AC97-E09B345BE9BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C531C293-719B-411A-B99C-AC64A2FCA552}

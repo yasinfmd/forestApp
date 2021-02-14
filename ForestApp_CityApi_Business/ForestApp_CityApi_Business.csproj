@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ForestAppBase\ForestAppBase.csproj" />
+    <ProjectReference Include="..\ForestApp_CityApi_DataAccess\ForestApp_CityApi_DataAccess.csproj" />
+    <ProjectReference Include="..\ForestApp_CityApi_Dto\ForestApp_CityApi_Dto.csproj" />
+    <ProjectReference Include="..\ForestApp_CityApi_Entity\ForestApp_CityApi_Entity.csproj" />
+  </ItemGroup>
+
+</Project>

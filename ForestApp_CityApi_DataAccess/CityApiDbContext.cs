@@ -22,14 +22,14 @@ namespace ForestApp_CityApi_DataAccess
         public DbSet<City> Cities { get; set; }
         public DbSet<District> Districts { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=.;Database=ForestAppDb;Trusted_Connection=True;");
-        }
-        //     public CityAppDbContext(DbContextOptions<CityAppDbContext> options)
-        //: base(options)
-        //     {
-        //     }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(@"Server=.;Database=ForestAppDb;Trusted_Connection=True;");
+        //}
+             public CityApiDbContext(DbContextOptions<CityApiDbContext> options)
+        : base(options)
+            {
+            }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

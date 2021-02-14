@@ -1,16 +1,25 @@
+using ForestApp_CityApi.Extension;
+using ForestApp_CityApi.Filter;
 using ForestApp_CityApi_DataAccess;
+using ForestAppBase.Abstract;
+using ForestAppBase.Concrate;
+using ForestAppBase;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.IO;
+using System.Reflection;
+using ForestApp_CityApi_Entity;
+using ForestApp_CityApi_DataAccess.Abstract;
+using ForestApp_CityApi_DataAccess.Concrate;
+using ForestApp_CityApi_Business.Abstract;
+using ForestApp_CityApi_Business.Concrate;
+using ForestApp_CityApi_Dto;
 
 namespace ForestApp_CityApi
 {
@@ -26,8 +35,13 @@ namespace ForestApp_CityApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddDbContext<CityApiDbContext>(opt => opt.UseSqlServer(@"Server=.;Database=ForestAppDb;Trusted_Connection=True;"));
+            services.AddControllers(options =>
+            {
+                options.Filters.Add<ValidationFilter>();
+            }).UseCityApiFluentValidation();
+
+            services.UseForestAppCityContext();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,14 +52,27 @@ namespace ForestApp_CityApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MusicApp API V1");
+                c.RoutePrefix = string.Empty;
+            });
+
+            app.UseFileServer();
+
             app.UseRouting();
 
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
         }
+
+     
     }
 }

@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ForestAppBase\ForestAppBase.csproj" />
     <ProjectReference Include="..\ForestApp_CityApi_Entity\ForestApp_CityApi_Entity.csproj" />
   </ItemGroup>
 
