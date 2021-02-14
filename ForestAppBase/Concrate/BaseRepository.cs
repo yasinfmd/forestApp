@@ -89,6 +89,16 @@ namespace ForestAppBase.Concrate
             return entity;
         }
 
+        public async Task<int> DeleteByGuidId(Guid id)
+        {
+            var item = await _dbSet.FindAsync(id);
+            _dbSet.Remove(item);
+            return await _context.SaveChangesAsync();
+        }
 
+        public async Task<T> GetByGuidId(Guid id)
+        {
+            return await _dbSet.FindAsync(id);
+        }
     }
 }

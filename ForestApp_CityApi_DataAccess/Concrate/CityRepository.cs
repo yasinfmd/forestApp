@@ -33,6 +33,11 @@ namespace ForestApp_CityApi_DataAccess.Concrate
             return await _baseRepository.Delete(entityToDelete);
         }
 
+        public async Task<int> DeleteByGuidId(Guid id)
+        {
+            return await _baseRepository.DeleteByGuidId(id);
+        }
+
         public async Task<int> DeleteById(int id)
         {
             return await _baseRepository.DeleteById(id);
@@ -52,6 +57,11 @@ namespace ForestApp_CityApi_DataAccess.Concrate
         public async Task<IEnumerable<City>> GetAll()
         {
             return await _baseRepository.GetAll();
+        }
+
+        public async Task<City> GetByGuidId(Guid id)
+        {
+            return await _baseRepository.GetByGuidId(id);
         }
 
         public async Task<City> GetByID(int id)

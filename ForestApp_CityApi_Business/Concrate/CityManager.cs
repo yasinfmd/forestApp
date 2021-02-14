@@ -34,5 +34,16 @@ namespace ForestApp_CityApi_Business.Concrate
             baseResponse.Result = mappedResult;
             return baseResponse;
         }
+
+        public  async Task<BaseResponse<CityDto>> GetCity(Guid id)
+        {
+            BaseResponse<CityDto> baseResponse = new BaseResponse<CityDto>();
+            var result = await _cityRepository.GetByGuidId(id);
+            var mappedResult = _mapper.Map<CityDto>(result);
+            baseResponse.IsSuccess = true;
+            baseResponse.TimeStamp = DateTime.Now;
+            baseResponse.Result = mappedResult;
+            return baseResponse;
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace ForestAppBase.Abstract
 {
     public interface IBaseRepository<Ctx,TEntity> where Ctx : DbContext where TEntity : class
     {
+        Task<int> DeleteByGuidId(Guid id);
         Task<int> DeleteById(int id);
         Task<int> Delete(TEntity entityToDelete);
         Task<IList<TEntity>> GetLast(Expression<Func<TEntity, int>> filter, int takeCount = 10);
@@ -16,6 +17,8 @@ namespace ForestAppBase.Abstract
         Task<bool> isExists(Expression<Func<TEntity, bool>> filter);
         Task<IEnumerable<TEntity>> GetAll();
         Task<TEntity> GetByID(int id);
+
+        Task<TEntity> GetByGuidId(Guid id);
         Task<TEntity> Insert(TEntity entity);
         Task<TEntity> Update(TEntity entityToUpdate);
         Task<TEntity> FindOne(Expression<Func<TEntity, bool>> filter);

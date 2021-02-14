@@ -25,8 +25,6 @@ namespace ForestApp_CityApi.Controllers
             try
             {
                 var response =await _cityService.GetAll();
-
-
                 return Ok(response);
             }
             catch (Exception exception)
@@ -37,10 +35,18 @@ namespace ForestApp_CityApi.Controllers
         }
 
         // GET api/<CityController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("Show/{id}")]
+        public async Task<IActionResult> Show(Guid id)
         {
-            return "value";
+            try
+            {
+                var response = await _cityService.GetCity(id);
+                return Ok();
+            }
+            catch (Exception exception)
+            {
+                return ErrorInternal(exception, $"{ControllerContext.ActionDescriptor.DisplayName} Exception Message : {exception.Message} - {exception.InnerException}");
+            }
         }
 
         // POST api/<CityController>

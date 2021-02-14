@@ -13,6 +13,8 @@ namespace ForestApp_CityApi_Business.Abstract
     {
        Task<BaseResponse<IEnumerable<CityDto>>> GetAll();
 
+        Task<BaseResponse<CityDto>> GetCity(Guid id);
+
 
     }
 }
