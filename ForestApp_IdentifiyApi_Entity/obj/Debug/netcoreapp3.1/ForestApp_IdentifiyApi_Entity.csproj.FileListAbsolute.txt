@@ -1,0 +1,9 @@
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_Entity\bin\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_Entity.deps.json
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_Entity\bin\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_Entity.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_Entity\bin\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_Entity.pdb
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_Entity\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_Entity.csprojAssemblyReference.cache
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_Entity\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_Entity.AssemblyInfoInputs.cache
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_Entity\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_Entity.AssemblyInfo.cs
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_Entity\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_Entity.csproj.CoreCompileInputs.cache
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_Entity\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_Entity.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_Entity\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_Entity.pdb

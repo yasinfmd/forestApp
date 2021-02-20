@@ -1,25 +1,13 @@
 using ForestApp_CityApi.Extension;
 using ForestApp_CityApi.Filter;
-using ForestApp_CityApi_DataAccess;
-using ForestAppBase.Abstract;
-using ForestAppBase.Concrate;
-using ForestAppBase;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
-using System;
-using System.IO;
-using System.Reflection;
-using ForestApp_CityApi_Entity;
-using ForestApp_CityApi_DataAccess.Abstract;
-using ForestApp_CityApi_DataAccess.Concrate;
 using ForestApp_CityApi_Business.Abstract;
 using ForestApp_CityApi_Business.Concrate;
-using ForestApp_CityApi_Dto;
+using Microsoft.Extensions.Caching.Distributed;
 
 namespace ForestApp_CityApi
 {
@@ -38,9 +26,11 @@ namespace ForestApp_CityApi
             services.AddControllers(options =>
             {
                 options.Filters.Add<ValidationFilter>();
-            }).UseCityApiFluentValidation();
-
-            services.UseForestAppCityContext();
+            }).AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
+              .UseCityApiFluentValidation();
+            services.UseForestAppCityContext(Configuration);
+            services.UseRedisContext(Configuration);
 
         }
 
@@ -73,6 +63,6 @@ namespace ForestApp_CityApi
             });
         }
 
-     
+
     }
 }

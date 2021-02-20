@@ -8,6 +8,7 @@ using ForestApp_CityApi_Dto;
 using ForestApp_CityApi_Entity;
 using ForestAppBase.Abstract;
 using ForestAppBase.Concrate;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
@@ -20,14 +21,25 @@ namespace ForestApp_CityApi.Extension
 {
     public static class ForestAppContext
     {
-        public static IServiceCollection UseForestAppCityContext(this IServiceCollection services)
+
+        public static IServiceCollection UseForestAppCityContext(this IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration configuration)
         {
 
             services.AddScoped(typeof(IBaseRepository<CityApiDbContext, City>), typeof(BaseRepository<CityApiDbContext, City>));
             services.AddScoped(typeof(IBaseRepository<CityApiDbContext, District>), typeof(BaseRepository<CityApiDbContext, District>));
             services.AddScoped<ICityRepository, CityRepository>();
             services.AddScoped<ICityService, CityManager>();
-            services.AddDbContext<CityApiDbContext>(opt => opt.UseSqlServer(@"Server=.;Database=ForestAppDb;Trusted_Connection=True;"));
+            services.AddScoped<IDistrictRepository, DistrictRepository>();
+
+            services.Configure<FormOptions>(o =>
+            {
+                o.ValueLengthLimit = int.MaxValue;
+                o.MultipartBodyLengthLimit = int.MaxValue;
+                o.MemoryBufferThreshold = int.MaxValue;
+            });
+            services.AddScoped<IDistrictService, DistrictManager>();
+
+            services.AddDbContext<CityApiDbContext>(opt => opt.UseSqlServer(configuration["SqlString"]));
             services.AddAutoMapper(typeof(AutoMapping));
 
             services.AddSwaggerGen(c =>
@@ -39,10 +51,6 @@ namespace ForestApp_CityApi.Extension
                     Description = "ForestApp City Api",
                     Contact = new OpenApiContact() { Email = "ysndlklc1234@gmail.com", Name = "Yasin Efem Dalkilic", Url = new Uri("https://github.com/yasinfmd/"), }
                 });
-                // var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                //c.IncludeXmlComments(xmlPath);
-
             });
 
             return services;

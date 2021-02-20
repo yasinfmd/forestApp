@@ -1,4 +1,7 @@
 ﻿using ForestApp_CityApi_Business.Abstract;
+using ForestApp_CityApi_Dto;
+using ForestAppBase.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -20,6 +23,9 @@ namespace ForestApp_CityApi.Controllers
         }
         // GET: api/<CityController>
         [HttpGet("All")]
+        [ProducesResponseType(typeof(BaseResponse<IEnumerable<CityDto>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<ErrorModel>), StatusCodes.Status500InternalServerError)]
+        [Produces("application/json")]
         public async Task<IActionResult> Index()
         {
             try
@@ -47,24 +53,6 @@ namespace ForestApp_CityApi.Controllers
             {
                 return ErrorInternal(exception, $"{ControllerContext.ActionDescriptor.DisplayName} Exception Message : {exception.Message} - {exception.InnerException}");
             }
-        }
-
-        // POST api/<CityController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<CityController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CityController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

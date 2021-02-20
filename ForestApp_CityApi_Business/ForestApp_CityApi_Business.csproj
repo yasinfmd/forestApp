@@ -9,6 +9,7 @@
     <ProjectReference Include="..\ForestApp_CityApi_DataAccess\ForestApp_CityApi_DataAccess.csproj" />
     <ProjectReference Include="..\ForestApp_CityApi_Dto\ForestApp_CityApi_Dto.csproj" />
     <ProjectReference Include="..\ForestApp_CityApi_Entity\ForestApp_CityApi_Entity.csproj" />
+    <ProjectReference Include="..\ForestApp_CityApi_Redis\ForestApp_CityApi_Redis.csproj" />
   </ItemGroup>
 
 </Project>

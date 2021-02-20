@@ -1,11 +1,15 @@
 ﻿using ForestApp_CityApi_DataAccess.Abstract;
 using ForestApp_CityApi_Entity;
 using ForestAppBase.Abstract;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+
+
 
 namespace ForestApp_CityApi_DataAccess.Concrate
 {
@@ -56,7 +60,7 @@ namespace ForestApp_CityApi_DataAccess.Concrate
 
         public async Task<IEnumerable<City>> GetAll()
         {
-            return await _baseRepository.GetAll();
+            return await _context.Cities.Include(d => d.Districts).ToListAsync();
         }
 
         public async Task<City> GetByGuidId(Guid id)

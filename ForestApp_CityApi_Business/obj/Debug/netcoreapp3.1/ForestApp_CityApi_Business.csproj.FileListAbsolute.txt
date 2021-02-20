@@ -18,3 +18,5 @@ C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Business\obj\Debug\netc
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Business\obj\Debug\netcoreapp3.1\ForestApp_CityApi_Business.pdb
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Business\bin\Debug\netcoreapp3.1\ForestApp_CityApi_Dto.dll
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Business\bin\Debug\netcoreapp3.1\ForestApp_CityApi_Dto.pdb
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Business\bin\Debug\netcoreapp3.1\ForestApp_CityApi_Redis.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Business\bin\Debug\netcoreapp3.1\ForestApp_CityApi_Redis.pdb

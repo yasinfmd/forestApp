@@ -1,0 +1,9 @@
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Redis\bin\Debug\netcoreapp3.1\ForestApp_CityApi_Redis.deps.json
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Redis\bin\Debug\netcoreapp3.1\ForestApp_CityApi_Redis.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Redis\bin\Debug\netcoreapp3.1\ForestApp_CityApi_Redis.pdb
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Redis\obj\Debug\netcoreapp3.1\ForestApp_CityApi_Redis.csprojAssemblyReference.cache
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Redis\obj\Debug\netcoreapp3.1\ForestApp_CityApi_Redis.AssemblyInfoInputs.cache
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Redis\obj\Debug\netcoreapp3.1\ForestApp_CityApi_Redis.AssemblyInfo.cs
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Redis\obj\Debug\netcoreapp3.1\ForestApp_CityApi_Redis.csproj.CoreCompileInputs.cache
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Redis\obj\Debug\netcoreapp3.1\ForestApp_CityApi_Redis.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_CityApi_Redis\obj\Debug\netcoreapp3.1\ForestApp_CityApi_Redis.pdb
