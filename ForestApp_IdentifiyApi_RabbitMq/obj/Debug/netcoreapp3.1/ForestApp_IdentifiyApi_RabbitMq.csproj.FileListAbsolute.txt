@@ -1,0 +1,8 @@
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\bin\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.deps.json
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\bin\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\bin\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.pdb
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.AssemblyInfoInputs.cache
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.AssemblyInfo.cs
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.csproj.CoreCompileInputs.cache
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.pdb

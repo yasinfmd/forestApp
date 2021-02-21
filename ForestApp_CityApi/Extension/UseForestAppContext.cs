@@ -8,14 +8,12 @@ using ForestApp_CityApi_Dto;
 using ForestApp_CityApi_Entity;
 using ForestAppBase.Abstract;
 using ForestAppBase.Concrate;
+using ForestAppBase.Models;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ForestApp_CityApi.Extension
 {
@@ -30,7 +28,7 @@ namespace ForestApp_CityApi.Extension
             services.AddScoped<ICityRepository, CityRepository>();
             services.AddScoped<ICityService, CityManager>();
             services.AddScoped<IDistrictRepository, DistrictRepository>();
-
+            services.AddScoped<BaseResponse<object>>();
             services.Configure<FormOptions>(o =>
             {
                 o.ValueLengthLimit = int.MaxValue;

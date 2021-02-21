@@ -15,5 +15,8 @@ namespace ForestApp_IdentifiyApi_Entity
 
         public int PasswordResetCount { get; set; }
 
+        public string Gender { get; set; }
+
+        public virtual IEnumerable<UserOldPasswords>? UserOldPasswords { get; set; }
     }
 }

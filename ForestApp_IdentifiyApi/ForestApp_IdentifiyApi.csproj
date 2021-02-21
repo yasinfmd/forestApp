@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.5.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.9" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.0.4" />
@@ -12,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ForestApp_IdentifiyApi_DataAccess\ForestApp_IdentifiyApi_DataAccess.csproj" />
+    <ProjectReference Include="..\ForestApp_IdentifyApi_Business\ForestApp_IdentifyApi_Business.csproj" />
   </ItemGroup>
 
 

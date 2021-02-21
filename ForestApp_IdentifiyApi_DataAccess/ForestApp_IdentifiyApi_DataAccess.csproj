@@ -22,4 +22,9 @@
     <ProjectReference Include="..\ForestApp_IdentifiyApi_Entity\ForestApp_IdentifiyApi_Entity.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+    <Folder Include="Concrate\" />
+  </ItemGroup>
+
 </Project>

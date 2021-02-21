@@ -11,7 +11,7 @@ namespace ForestApp_CityApi_Business.Abstract
 {
     public interface ICityService
     {
-       Task<BaseResponse<IEnumerable<CityDto>>> GetAll();
+       Task<BaseResponse<object>> GetAll();
 
         Task<BaseResponse<CityDto>> GetCity(Guid id);
 

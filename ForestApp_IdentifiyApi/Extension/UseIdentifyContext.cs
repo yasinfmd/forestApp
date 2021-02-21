@@ -1,5 +1,9 @@
 ﻿using ForestApp_IdentifiyApi.Localize;
 using ForestApp_IdentifiyApi_DataAccess;
+using ForestApp_IdentifiyApi_Entity;
+using ForestApp_IdentifiyApi_RabbitMq;
+using ForestApp_IdentifyApi_Business.Abstract;
+using ForestApp_IdentifyApi_Business.Concrate;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
@@ -9,10 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ForestApp_IdentifiyApi.Extension
 {
@@ -26,6 +27,9 @@ namespace ForestApp_IdentifiyApi.Extension
                 o.MultipartBodyLengthLimit = int.MaxValue;
                 o.MemoryBufferThreshold = int.MaxValue;
             });
+            services.AddScoped<IUserService, UserServiceManager>();
+            services.AddSingleton<RabbitMqService>();
+            services.AddScoped<Publisher>(p => new Publisher(new RabbitMqService()));
             services.AddDbContext<IdentifiyApiDbContext>(opt => opt.UseSqlServer(configuration["SqlIdentityString"]));
             services.AddSwaggerGen(c =>
             {
@@ -69,6 +73,8 @@ namespace ForestApp_IdentifiyApi.Extension
                     RequireExpirationTime = true,
                 };
             });
+
+            services.AddScoped<AuthResponse<object>>();
             return services;
         }
     }

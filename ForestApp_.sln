@@ -23,15 +23,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_CityApi_Business"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_CityApi_Dto", "ForestApp_CityApi_Dto\ForestApp_CityApi_Dto.csproj", "{F689259B-FCCE-4DAD-B5F5-554C54EF4808}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_CityApi_Redis", "ForestApp_CityApi_Redis\ForestApp_CityApi_Redis.csproj", "{452D151B-B98F-4224-9C9D-285A7A80EDF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_CityApi_Redis", "ForestApp_CityApi_Redis\ForestApp_CityApi_Redis.csproj", "{452D151B-B98F-4224-9C9D-285A7A80EDF3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForestApp.IdentifiyApi", "ForestApp.IdentifiyApi", "{706AFA72-36F6-49B3-BBC7-0A409992B527}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_IdentifiyApi", "ForestApp_IdentifiyApi\ForestApp_IdentifiyApi.csproj", "{D6167BC9-FA07-4449-87D9-1D6188F7B9C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_IdentifiyApi", "ForestApp_IdentifiyApi\ForestApp_IdentifiyApi.csproj", "{D6167BC9-FA07-4449-87D9-1D6188F7B9C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_IdentifiyApi_DataAccess", "ForestApp_IdentifiyApi_DataAccess\ForestApp_IdentifiyApi_DataAccess.csproj", "{CAFDE9AB-9774-488A-90D5-CBEAF471C455}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_IdentifiyApi_DataAccess", "ForestApp_IdentifiyApi_DataAccess\ForestApp_IdentifiyApi_DataAccess.csproj", "{CAFDE9AB-9774-488A-90D5-CBEAF471C455}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_IdentifiyApi_Entity", "ForestApp_IdentifiyApi_Entity\ForestApp_IdentifiyApi_Entity.csproj", "{097FB701-B910-4F35-89A9-0DC2D82FB969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_IdentifiyApi_Entity", "ForestApp_IdentifiyApi_Entity\ForestApp_IdentifiyApi_Entity.csproj", "{097FB701-B910-4F35-89A9-0DC2D82FB969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_IdentifyApi_Business", "ForestApp_IdentifyApi_Business\ForestApp_IdentifyApi_Business.csproj", "{F60F9E57-B963-44D1-958F-5BD957618C44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_IdentifiyApi_RabbitMq", "ForestApp_IdentifiyApi_RabbitMq\ForestApp_IdentifiyApi_RabbitMq.csproj", "{A4680F37-5E38-437C-9423-74A457C810D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{097FB701-B910-4F35-89A9-0DC2D82FB969}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{097FB701-B910-4F35-89A9-0DC2D82FB969}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{097FB701-B910-4F35-89A9-0DC2D82FB969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F60F9E57-B963-44D1-958F-5BD957618C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F60F9E57-B963-44D1-958F-5BD957618C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F60F9E57-B963-44D1-958F-5BD957618C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F60F9E57-B963-44D1-958F-5BD957618C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4680F37-5E38-437C-9423-74A457C810D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4680F37-5E38-437C-9423-74A457C810D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4680F37-5E38-437C-9423-74A457C810D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4680F37-5E38-437C-9423-74A457C810D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +116,8 @@ Global
 		{D6167BC9-FA07-4449-87D9-1D6188F7B9C9} = {706AFA72-36F6-49B3-BBC7-0A409992B527}
 		{CAFDE9AB-9774-488A-90D5-CBEAF471C455} = {706AFA72-36F6-49B3-BBC7-0A409992B527}
 		{097FB701-B910-4F35-89A9-0DC2D82FB969} = {706AFA72-36F6-49B3-BBC7-0A409992B527}
+		{F60F9E57-B963-44D1-958F-5BD957618C44} = {706AFA72-36F6-49B3-BBC7-0A409992B527}
+		{A4680F37-5E38-437C-9423-74A457C810D0} = {706AFA72-36F6-49B3-BBC7-0A409992B527}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C531C293-719B-411A-B99C-AC64A2FCA552}

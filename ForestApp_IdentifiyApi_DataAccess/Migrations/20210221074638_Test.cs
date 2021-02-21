@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ForestApp_IdentifiyApi_DataAccess.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Test : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -43,7 +43,8 @@ namespace ForestApp_IdentifiyApi_DataAccess.Migrations
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     Birthdate = table.Column<DateTime>(nullable: true),
-                    PasswordResetCount = table.Column<int>(nullable: false)
+                    PasswordResetCount = table.Column<int>(nullable: false),
+                    Gender = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -156,6 +157,26 @@ namespace ForestApp_IdentifiyApi_DataAccess.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "UserOldPasswords",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    PasswordDate = table.Column<DateTime>(nullable: false),
+                    UserId = table.Column<Guid>(nullable: true),
+                    ApplicationUserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserOldPasswords", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserOldPasswords_AspNetUsers_ApplicationUserId",
+                        column: x => x.ApplicationUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -194,6 +215,11 @@ namespace ForestApp_IdentifiyApi_DataAccess.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserOldPasswords_ApplicationUserId",
+                table: "UserOldPasswords",
+                column: "ApplicationUserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -212,6 +238,9 @@ namespace ForestApp_IdentifiyApi_DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "UserOldPasswords");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
