@@ -9,9 +9,15 @@ namespace ForestApp_IdentifiyApi.Validators
     {
         public bool ValidAge(DateTime birthdate)
         {
-            //TODO
-            return true;
-
+           var yearDiff= DateTime.Now - birthdate;
+            if(yearDiff.TotalDays> 5475)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
