@@ -84,3 +84,5 @@ C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi\bin\Debug\netcorea
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.pdb

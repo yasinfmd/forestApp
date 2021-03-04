@@ -1,4 +1,6 @@
-﻿using ForestApp_IdentifiyApi_Entity;
+﻿using EventBusRabbitMQ.Consts;
+using EventBusRabbitMQ.Publisher;
+using ForestApp_IdentifiyApi_Entity;
 using ForestApp_IdentifiyApi_Entity.ParameterModels;
 using ForestApp_IdentifiyApi_RabbitMq;
 using ForestApp_IdentifyApi_Business.Abstract;
@@ -18,24 +20,33 @@ namespace ForestApp_IdentifyApi_Business.Concrate
 {
     public class UserServiceManager : IUserService
     {
-      
 
 
-            private readonly UserManager<IdentityUser> _userManager;
+        private readonly SendEmailPublisher _sendEmailPublisher;  
+            private readonly UserManager<ApplicationUser> _userManager;
         // private readonly IUserManagerRepository<ApplicationUser> _userManagerRepository;
         private readonly AuthResponse<object> _authResponse;
-        private static Publisher _publisher;
+        //private static Publisher _publisher;
         //IUserManagerRepository<ApplicationUser> userManagerRepository
         private readonly IConfiguration _configuration;
-        public UserServiceManager(IConfiguration configuration, AuthResponse<object> authResponse, Publisher publisher, UserManager<IdentityUser> userManager)
+
+        public UserServiceManager(SendEmailPublisher sendEmailPublisher, UserManager<ApplicationUser> userManager, AuthResponse<object> authResponse, IConfiguration configuration)
         {
-            _configuration = configuration;
-            _publisher = publisher;
-            _authResponse = authResponse;
-            //_userManagerRepository = userManagerRepository;
+            _sendEmailPublisher = sendEmailPublisher;
             _userManager = userManager;
-            //_configuration = configuration;
+            _authResponse = authResponse;
+            _configuration = configuration;
         }
+
+        //public UserServiceManager(IConfiguration configuration, AuthResponse<object> authResponse, UserManager<ApplicationUser> userManager)
+        //{
+        //    _configuration = configuration;
+        //    //_publisher = publisher;
+        //    _authResponse = authResponse;
+        //    //_userManagerRepository = userManagerRepository;
+        //    _userManager = userManager;
+        //    //_configuration = configuration;
+        //}
         public Task<AuthResponse<object>> ConfirmEmail(string userId, string token)
         {
             throw new NotImplementedException();
@@ -62,7 +73,18 @@ namespace ForestApp_IdentifyApi_Business.Concrate
                 var validEmailToken = WebEncoders.Base64UrlEncode(encodedEmailToken);
                 string uri = $"{_configuration["Server"]}api/auth/confirmEmail?userId={identityUser.Id}&token={validEmailToken}";
                 var jsonData = JsonSerializer.Serialize(new UserEmailModel() { Email = userRegisterModel.Email, Message = $"<h1>Email Adresi Onaylama</h1> <p>Lütfen Email Onaylayın <a href='{uri}'> Tıklayın</a> </p>", Title = "Email Onayı" });
-                _publisher.OnPublish("mailQueque", jsonData);
+
+                try
+                {
+                    _sendEmailPublisher.PublishEmail(EventBusConsts.SendEmailQueque, jsonData);
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                //_publisher.OnPublish("mailQueque", jsonData);
                 //_publisher = new Publisher("mailQueque", jsonData);
                 _authResponse.Result = "Kullancı Kayıt Olma İşlemi Başarıyla Gerçekleşti";
                 _authResponse.isSuccess = true;

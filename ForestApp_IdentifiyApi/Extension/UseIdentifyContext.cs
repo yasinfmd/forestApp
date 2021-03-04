@@ -1,4 +1,6 @@
-﻿using ForestApp_IdentifiyApi.Localize;
+﻿using EventBusRabbitMQ;
+using EventBusRabbitMQ.Publisher;
+using ForestApp_IdentifiyApi.Localize;
 using ForestApp_IdentifiyApi_DataAccess;
 using ForestApp_IdentifiyApi_Entity;
 using ForestApp_IdentifiyApi_RabbitMq;
@@ -12,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using RabbitMQ.Client;
 using System;
 using System.Text;
 
@@ -28,8 +31,9 @@ namespace ForestApp_IdentifiyApi.Extension
                 o.MemoryBufferThreshold = int.MaxValue;
             });
             services.AddScoped<IUserService, UserServiceManager>();
+            services.AddSingleton<SendEmailPublisher>();
             services.AddSingleton<RabbitMqService>();
-            services.AddScoped<Publisher>(p => new Publisher(new RabbitMqService()));
+            //services.AddScoped<Publisher>(p => new Publisher(new RabbitMqService()));
             services.AddDbContext<IdentifiyApiDbContext>(opt => opt.UseSqlServer(configuration["SqlIdentityString"]));
             services.AddSwaggerGen(c =>
             {
@@ -41,7 +45,7 @@ namespace ForestApp_IdentifiyApi.Extension
                     Contact = new OpenApiContact() { Email = "ysndlklc1234@gmail.com", Name = "Yasin Efem Dalkilic", Url = new Uri("https://github.com/yasinfmd/"), }
                 });
             });
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = true;
                 options.Password.RequiredLength = 8;
@@ -72,6 +76,15 @@ namespace ForestApp_IdentifiyApi.Extension
                     ValidateAudience = false,
                     RequireExpirationTime = true,
                 };
+            });
+
+            services.AddSingleton<IRabbitMQConnection>(sp =>
+            {
+                var factory = new ConnectionFactory()
+                {
+                    HostName = "localhost"
+                };
+                return new RabbitMQConnection(factory);
             });
 
             services.AddScoped<AuthResponse<object>>();

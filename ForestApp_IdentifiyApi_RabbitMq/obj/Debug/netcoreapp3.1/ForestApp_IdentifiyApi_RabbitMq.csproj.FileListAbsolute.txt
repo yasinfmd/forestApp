@@ -6,3 +6,4 @@ C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\obj\Debug
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.csproj.CoreCompileInputs.cache
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.dll
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.pdb
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifiyApi_RabbitMq\obj\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.csprojAssemblyReference.cache

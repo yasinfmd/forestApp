@@ -16,3 +16,5 @@ C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifyApi_Business\bin\Debug\
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifyApi_Business\bin\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.dll
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifyApi_Business\bin\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_DataAccess.pdb
 C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifyApi_Business\bin\Debug\netcoreapp3.1\ForestApp_IdentifiyApi_RabbitMq.pdb
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifyApi_Business\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.dll
+C:\Users\ysndl\source\repos\ForestApp_\ForestApp_IdentifyApi_Business\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.pdb

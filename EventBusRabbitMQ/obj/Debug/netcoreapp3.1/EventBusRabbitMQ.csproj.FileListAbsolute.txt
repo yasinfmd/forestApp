@@ -1,0 +1,9 @@
+C:\Users\ysndl\source\repos\ForestApp_\EventBusRabbitMQ\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.deps.json
+C:\Users\ysndl\source\repos\ForestApp_\EventBusRabbitMQ\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.dll
+C:\Users\ysndl\source\repos\ForestApp_\EventBusRabbitMQ\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.pdb
+C:\Users\ysndl\source\repos\ForestApp_\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.csprojAssemblyReference.cache
+C:\Users\ysndl\source\repos\ForestApp_\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.AssemblyInfoInputs.cache
+C:\Users\ysndl\source\repos\ForestApp_\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.AssemblyInfo.cs
+C:\Users\ysndl\source\repos\ForestApp_\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.csproj.CoreCompileInputs.cache
+C:\Users\ysndl\source\repos\ForestApp_\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.dll
+C:\Users\ysndl\source\repos\ForestApp_\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.pdb

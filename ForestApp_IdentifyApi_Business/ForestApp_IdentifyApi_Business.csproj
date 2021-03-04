@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EventBusRabbitMQ\EventBusRabbitMQ.csproj" />
     <ProjectReference Include="..\ForestApp_IdentifiyApi_DataAccess\ForestApp_IdentifiyApi_DataAccess.csproj" />
     <ProjectReference Include="..\ForestApp_IdentifiyApi_Entity\ForestApp_IdentifiyApi_Entity.csproj" />
     <ProjectReference Include="..\ForestApp_IdentifiyApi_RabbitMq\ForestApp_IdentifiyApi_RabbitMq.csproj" />

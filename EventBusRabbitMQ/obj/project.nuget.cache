@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "FtxBPZ/jEVJSZ9+CT6KoIudb96UCE5KucIetDz0bc0FuPBb9K77bwDDzjiuVvzapZFrBazyEfz5r/N+0xCov2g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ysndl\\source\\repos\\ForestApp_\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ysndl\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
+    "C:\\Users\\ysndl\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\ysndl\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

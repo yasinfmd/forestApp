@@ -33,9 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_IdentifiyApi_Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_IdentifiyApi_Entity", "ForestApp_IdentifiyApi_Entity\ForestApp_IdentifiyApi_Entity.csproj", "{097FB701-B910-4F35-89A9-0DC2D82FB969}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_IdentifyApi_Business", "ForestApp_IdentifyApi_Business\ForestApp_IdentifyApi_Business.csproj", "{F60F9E57-B963-44D1-958F-5BD957618C44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_IdentifyApi_Business", "ForestApp_IdentifyApi_Business\ForestApp_IdentifyApi_Business.csproj", "{F60F9E57-B963-44D1-958F-5BD957618C44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestApp_IdentifiyApi_RabbitMq", "ForestApp_IdentifiyApi_RabbitMq\ForestApp_IdentifiyApi_RabbitMq.csproj", "{A4680F37-5E38-437C-9423-74A457C810D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestApp_IdentifiyApi_RabbitMq", "ForestApp_IdentifiyApi_RabbitMq\ForestApp_IdentifiyApi_RabbitMq.csproj", "{A4680F37-5E38-437C-9423-74A457C810D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBusRabbitMQ", "EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{FECE48E0-BFDF-4B1E-996A-DA69A4A38287}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{A4680F37-5E38-437C-9423-74A457C810D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4680F37-5E38-437C-9423-74A457C810D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4680F37-5E38-437C-9423-74A457C810D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FECE48E0-BFDF-4B1E-996A-DA69A4A38287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FECE48E0-BFDF-4B1E-996A-DA69A4A38287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FECE48E0-BFDF-4B1E-996A-DA69A4A38287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FECE48E0-BFDF-4B1E-996A-DA69A4A38287}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +124,7 @@ Global
 		{097FB701-B910-4F35-89A9-0DC2D82FB969} = {706AFA72-36F6-49B3-BBC7-0A409992B527}
 		{F60F9E57-B963-44D1-958F-5BD957618C44} = {706AFA72-36F6-49B3-BBC7-0A409992B527}
 		{A4680F37-5E38-437C-9423-74A457C810D0} = {706AFA72-36F6-49B3-BBC7-0A409992B527}
+		{FECE48E0-BFDF-4B1E-996A-DA69A4A38287} = {9E1E7761-8A54-425E-BD2C-08A3C8FD68FD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C531C293-719B-411A-B99C-AC64A2FCA552}
