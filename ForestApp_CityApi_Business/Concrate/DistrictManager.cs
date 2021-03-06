@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ForestApp_CityApi_Business.Abstract;
+using ForestApp_CityApi_Business.Consts;
 using ForestApp_CityApi_DataAccess.Abstract;
 using ForestApp_CityApi_Dto;
 using ForestAppBase.Models;
@@ -24,7 +25,7 @@ namespace ForestApp_CityApi_Business.Concrate
         public async Task<BaseResponse<IEnumerable<DistrictDto>>> GetAll()
         {
             BaseResponse<IEnumerable<DistrictDto>> baseResponse = new BaseResponse<IEnumerable<DistrictDto>>();
-            string key = "District_" + DateTime.Now.ToString("yyyyMMdd_hh");
+            string key = RedisConsts.District + DateTime.Now.ToString("yyyyMMdd_hh");
             var keyExists = await _redisCacheService.Contains(key);
             if (keyExists)
             {

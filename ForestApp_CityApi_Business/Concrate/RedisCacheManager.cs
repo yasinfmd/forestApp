@@ -1,4 +1,5 @@
 ﻿using ForestApp_CityApi_Business.Abstract;
+using ForestApp_CityApi_Business.Consts;
 using ForestApp_CityApi_Redis;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.StackExchangeRedis;
@@ -28,7 +29,7 @@ namespace ForestApp_CityApi_Business.Concrate
 
         public async Task<bool> Contains(string recordId)
         {
-            return await _redisConnection.KeyExist(recordId);
+            return await _redisConnection.KeyExist(RedisConsts.InstanceName + recordId);
         }
 
         public T Get<T>(string recordId)
@@ -51,9 +52,18 @@ namespace ForestApp_CityApi_Business.Concrate
 
         public void SetAsync<T>(string recordId, T data)
         {
-            _options.SetSlidingExpiration(TimeSpan.FromMinutes(60));
-            var json = JsonSerializer.Serialize(data);
-            _distributedCache.SetStringAsync(recordId, json,_options);
+            try
+            {
+                _options.SetSlidingExpiration(TimeSpan.FromMinutes(60));
+                var json = JsonSerializer.Serialize(data);
+                _distributedCache.SetStringAsync(recordId, json, _options);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+ 
         }
 
         public async Task<bool> Clear()

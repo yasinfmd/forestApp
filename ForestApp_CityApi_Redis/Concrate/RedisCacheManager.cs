@@ -48,9 +48,18 @@ namespace ForestApp_CityApi_Redis.Concrate
 
         public void SetAsync<T>(string recordId, T data)
         {
-            _options.SetSlidingExpiration(TimeSpan.FromMinutes(60));
-            var json = JsonSerializer.Serialize(data);
-            _distributedCache.SetStringAsync(recordId, json, _options);
+            try
+            {
+                _options.SetSlidingExpiration(TimeSpan.FromMinutes(60));
+                var json = JsonSerializer.Serialize(data);
+                _distributedCache.SetStringAsync(recordId, json, _options);
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+         
         }
 
         public async Task<bool> Clear()

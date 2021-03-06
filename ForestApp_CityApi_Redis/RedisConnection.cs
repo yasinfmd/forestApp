@@ -11,7 +11,7 @@ namespace ForestApp_CityApi_Redis
         private static ConnectionMultiplexer _connectionMultiplexer;
         public RedisConnection()
         {
-            _connectionMultiplexer = ConnectionMultiplexer.Connect("127.0.0.1:6379,AllowAdmin=true");
+            _connectionMultiplexer = ConnectionMultiplexer.Connect("127.0.0.1:6375,AllowAdmin=true");
             _database = _connectionMultiplexer.GetDatabase(_currentDb);
         }
         public IDatabase Database => _database;
