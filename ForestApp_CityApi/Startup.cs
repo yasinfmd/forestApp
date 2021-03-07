@@ -5,9 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ForestApp_CityApi_Business.Abstract;
-using ForestApp_CityApi_Business.Concrate;
-using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Logging;
 
 namespace ForestApp_CityApi
 {
@@ -17,7 +15,7 @@ namespace ForestApp_CityApi
         {
             Configuration = configuration;
         }
-
+        private  ILogger _logger;
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -35,8 +33,10 @@ namespace ForestApp_CityApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,  ILogger<Startup> logger)
         {
+
+          
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -52,11 +52,13 @@ namespace ForestApp_CityApi
 
             app.UseFileServer();
 
+           
+
             app.UseRouting();
 
             app.UseAuthorization();
 
-
+            app.UseRabbitMQListener();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

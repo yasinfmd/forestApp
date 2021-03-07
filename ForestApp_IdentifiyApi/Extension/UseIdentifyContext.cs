@@ -31,7 +31,7 @@ namespace ForestApp_IdentifiyApi.Extension
                 o.MemoryBufferThreshold = int.MaxValue;
             });
             services.AddScoped<IUserService, UserServiceManager>();
-            services.AddSingleton<SendEmailPublisher>();
+      
             services.AddSingleton<RabbitMqService>();
             //services.AddScoped<Publisher>(p => new Publisher(new RabbitMqService()));
             services.AddDbContext<IdentifiyApiDbContext>(opt => opt.UseSqlServer(configuration["SqlIdentityString"]));
@@ -86,7 +86,7 @@ namespace ForestApp_IdentifiyApi.Extension
                 };
                 return new RabbitMQConnection(factory);
             });
-
+            services.AddSingleton<SendEmailPublisher>();
             services.AddScoped<AuthResponse<object>>();
             return services;
         }

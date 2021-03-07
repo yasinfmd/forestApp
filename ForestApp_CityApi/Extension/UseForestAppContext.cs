@@ -1,4 +1,6 @@
 ﻿using AutoMapper.Configuration;
+using EventBusRabbitMQ;
+using ForestApp_CityApi.RabbitMQ;
 using ForestApp_CityApi_Business.Abstract;
 using ForestApp_CityApi_Business.Concrate;
 using ForestApp_CityApi_DataAccess;
@@ -13,6 +15,7 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using RabbitMQ.Client;
 using System;
 
 namespace ForestApp_CityApi.Extension
@@ -50,6 +53,17 @@ namespace ForestApp_CityApi.Extension
                     Contact = new OpenApiContact() { Email = "ysndlklc1234@gmail.com", Name = "Yasin Efem Dalkilic", Url = new Uri("https://github.com/yasinfmd/"), }
                 });
             });
+
+            services.AddSingleton<IRabbitMQConnection>(sp =>
+            {
+                var factory = new ConnectionFactory()
+                {
+                    HostName = "localhost"
+                };
+                return new RabbitMQConnection(factory);
+            });
+
+            services.AddSingleton<EventBusRabbitMQConsumer>();
 
             return services;
         }
